@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+#board {
+    width: 100vw;
+    height: 70vh;
+    background-color: floralwhite;
+}
+#hand {
+    display: flex;
+    justify-content: space-around;
+    transition: 0.5s;
+}
+.card {
+    width: 100px;
+    height: 180px;
+    background-color: brown;
+    border-radius: 5%;
+    border: 1px solid black;
+    /* transform:translate(-50%,-50%); */
+}
