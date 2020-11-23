@@ -4,19 +4,61 @@
 }
 #board {
     width: 100vw;
-    height: 70vh;
-    background-color: floralwhite;
+    height: 80vh;
+    background-image: url("./images/tabletexture.jpg");
+    position: relative;
+    /* z-index: -2; */
 }
 #hand {
     display: flex;
-    justify-content: space-around;
-    transition: 0.5s;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: 100vw;
+    height: 20vh;
+    box-shadow: 0 -20px 15px burlywood;
+    background: linear-gradient(burlywood,gray);
 }
 .card {
+    perspective: 1000px;
+    transition: transform 0.5s;
+    transform-style: preserve-3d;
+    position: relative;
     width: 100px;
-    height: 180px;
-    background-color: brown;
+    height: 153px;
     border-radius: 5%;
-    border: 1px solid black;
-    /* transform:translate(-50%,-50%); */
+    box-sizing: border-box;
+}
+
+.card > img {
+    width: 100%;
+    height: auto;
+    /* animation-name: CardTurn;
+    animation-duration: 1s; */
+    backface-visibility: hidden;
+    position: absolute;
+}
+.frontimage {
+    transform: rotateY(180deg);
+}
+.card > button {
+    position: absolute;
+    z-index: 5;
+    display: none;
+    width: 100%;
+    top: -20px;
+}
+@keyframes CardTurn {
+    0% {
+        height: 153px;
+        width: 100px;
+    }
+    50% {
+        width: 0px;
+    }
+    99% {height: 153px;}
+    100% {
+        width: 100px;
+        height: auto;
+    }
 }
