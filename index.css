@@ -109,6 +109,7 @@ p {
     display: none;
     width: 100%;
     top: -20px;
+    font-size: 1.2rem;
 }
 /* @keyframes CardTurn {
     0% {
