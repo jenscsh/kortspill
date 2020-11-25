@@ -1,23 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="no">
 <head>
     <!-- Playing cards credit: http://acbl.mybigcommerce.com/52-playing-cards/ -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Kortstokk</title>
     <link rel="stylesheet" href="index.css">
     <script src="index.js" defer></script>
 </head>
 <body>
     <div id="board">
-        
+        <div id="stock" tabindex="0">
+            <img src="./images/blue_back.png"  alt="">
+            <h4>Kortstokk</h4>
+            <p><b>Klikk her for å ta kort</b></p>
+            <p id="cardcount">Kort i stokken: 52</p>
+        </div>
+        <h1 id="boardtext">BORD</h1>
+        <article id="instructions">
+            <h3>Dra ett kort fra bunken. Trykk på kortet for å velge det. Når du har valgt ett kort, kan du:</h3>
+            <ul>
+                <li>Klikke et sted på bordet for å legge det der.</li>
+                <li>Klikke på hånda for å legge det tilbake til hånda.</li>
+                <li>Klikke på kortstokken for å legge det tilbake.</li>
+                <li>Trykke på snu-knappen for å snu kortet.</li>
+                <li>Trykke på det igjen for å avvelge det.</li>
+            </ul>
+        </article>
     </div>
     <article id="hand">
-        <div class="card">
-            <img src="./images/blue_back.png" class="backimage" alt="">
-            <img src="./images/cards/3D.png" class="frontimage" alt=""> 
-            <button>Snu</button>
-        </div>
+        <h1 id="handtext">HÅND</h1>
     </article>
 </body>
 </html>
