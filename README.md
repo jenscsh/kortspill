@@ -9,3 +9,5 @@ derfor er det en instruks som vises frem til man gjør noe med det første korte
 når den blir tom og bakgrunnen til hånda går lenger ned med bunken. På denne nettsiden kan du velge elementene med tab, men du kan ikke bruke alle selv om de
 er valgt. Det er uansett vanskelig å forestille seg hvordan denne nettsiden skulle fungert med tabindex, siden den bruker posisjonen til musa for å bestemme
 kortene skal gå. Kanskje man kunne lagd en alternativ versjon der bordet er delt opp i ruter.
+
+Kort hentet fra http://acbl.mybigcommerce.com/52-playing-cards/
