@@ -24,6 +24,16 @@ function SetUpCard(card) {
         } else if (hand.contains(e.target)) PutInHand();
         else if (board.contains(e.target)) PutOnBoard(e);
     });
+    card.addEventListener("keypress",(e)=>{
+        if (card===chosenCard) Unchoose();
+        else if (!chosenCard) {
+            Unchoose();
+            chosenCard=card;
+            card.style.border = "5px orange solid";
+            card.querySelector("button").style.display = "block";
+        } else if (hand.contains(e.target)) PutInHand();
+        else if (board.contains(e.target)) PutOnBoard(e);
+    });
     card.querySelector("button").addEventListener("click",(e)=>{
         if (card.turned) {
             card.cardcontent.style.transform = "rotateY(0deg)";
@@ -47,7 +57,7 @@ deck.addEventListener("click",(e)=>{
         let stockPos = Math.floor(Math.random()*cardstock.length);
         console.log(stockPos+"/"+cardstock.length);
         let faceValue = cardstock[stockPos];
-        hand.insertAdjacentHTML('beforeend',`<div class="card" id="${faceValue}" tabindex="1">
+        hand.insertAdjacentHTML('beforeend',`<div class="card" id="${faceValue}" tabindex="0">
             <div class="cardcontent">
                 <img src="./images/blue_back.png" class="backimage" alt="Snudd kort">
                 <img src="./images/cards/${faceValue}.png" class="frontimage" alt="Kort med verdi ${faceValue}"> 

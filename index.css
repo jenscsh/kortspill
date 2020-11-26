@@ -6,6 +6,9 @@
 p {
     font-size: 0.8rem;
 }
+*:focus {
+    outline: dimgray solid 2px;
+}
 #handtext,#boardtext {
     position: absolute;
     font-size: 15vh;
